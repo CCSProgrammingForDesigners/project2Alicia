@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Alicia's Arch Ideas</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id=mainDiv>
+      <h1>Through the solar system</h1>
+      <p>All planets shown proportionate to Earth</p>
+
+      <div id="sunPlanet">
+        <h2 class="label" id="sun">Sun (shown at 50% proportion)</h2>
+        <img class="planet" src="images//sun.png">
+      </div>
+
+      <h2 class="label" id="mercury">Mercury</h2>
+      <img class="planet" id="mercuryPlanet" src="images//mercury.png">
+
+      <h2 class="label" id="venus">Venus</h2>
+      <img class="planet" id="venusPlanet" src="images//venus.png">
+
+      <h2 class="label" id="earth">Earth</h2>
+      <img class="planet" id="earthPlanet" src="images//earth.png">
+
+      <h2 class="label" id="mars">Mars</h2>
+      <img class="planet" id="marsPlanet" src="images//mars.png">
+
+      <h2 class="label" id="jupiter">Jupiter</h2>
+      <img class="planet" id="jupiterPlanet" src="images//jupiter.png">
+
+      <h2 class="label" id="saturn">Saturn</h2>
+      <img class="planet" id="saturnPlanet" src="images//saturn.png">
+
+      <h2 class="label" id="uranus">Uranus</h2>
+      <img class="planet" id="uranusPlanet" src="images//uranus.png">
+
+      <h2 class="label" id="neptune">Neptune</h2>
+      <img class="planet" id="neptunePlanet" src="images//neptune.png">
+
+      <h2 class="label" id="pluto">Pluto</h2>
+      <img class="planet" id="plutoPlanet" src="images//pluto.png">
+
+      <script type="text/javascript">
+        function hideSun(){
+          let sunPlanet = document.getElementById('sunPlanet');
+          sunPlanet.innerHTML = '';
+          }
+          let sun = document.getElementById('sun');
+          sun.addEventListener('click', hideSun)
+
+
+        function moveMercury () {
+          let mercuryPlanet=document.getElementById('mercuryPlanet');
+          mercuryPlanet.classList.toggle('moveRight');
+          }
+          let mercury=document.getElementById('mercury');
+          mercury.addEventListener('mouseover', moveMercury)
+
+      </script>
+
+    </div>
+  </body>
+</html>
