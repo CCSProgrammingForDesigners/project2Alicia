@@ -11,7 +11,7 @@
       <p>All planets shown proportionate to Earth</p>
 
       <div id="sunPlanet">
-        <h2 class="label" id="sun">Sun (shown at 50% proportion)</h2>
+        <h2 class="label" id="sun">Sun (shown at 20% proportion)</h2>
         <img class="planet" src="images//sun.png">
       </div>
 
@@ -22,7 +22,7 @@
       <img class="planet" id="venusPlanet" src="images//venus.png">
 
       <h2 class="label" id="earth">Earth</h2>
-      <img class="planet" id="earthPlanet" src="images//earth.png">
+      <p id="earthPlanet"><img class="planet" src="images//earth.png"></p>
 
       <h2 class="label" id="mars">Mars</h2>
       <img class="planet" id="marsPlanet" src="images//mars.png">
@@ -47,17 +47,21 @@
           let sunPlanet = document.getElementById('sunPlanet');
           sunPlanet.innerHTML = '';
           }
-          let sun = document.getElementById('sun');
-          sun.addEventListener('click', hideSun)
+        let sun = document.getElementById('sun');
+        sun.addEventListener('click', hideSun)
 
-
-        function moveMercury () {
+        function moveMercury(){
           let mercuryPlanet=document.getElementById('mercuryPlanet');
           mercuryPlanet.classList.toggle('moveRight');
           }
-          let mercury=document.getElementById('mercury');
-          mercury.addEventListener('mouseover', moveMercury)
+        let mercury=document.getElementById('mercury');
+        mercury.addEventListener('mouseover', moveMercury)
 
+        function hideEarth(){
+          document.getElementById('earthPlanet').innerHTML='';
+          document.getElementById('earth').innerHTML='';
+          }
+        document.getElementById('earth').addEventListener('click', hideEarth)
       </script>
 
     </div>
