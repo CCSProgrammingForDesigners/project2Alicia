@@ -16,52 +16,65 @@
       </div>
 
       <h2 class="label" id="mercury">Mercury</h2>
-      <img class="planet" id="mercuryPlanet" src="images//mercury.png">
+      <p id="mercuryPlanet"><img class="planet" src="images//mercury.png"></p>
 
       <h2 class="label" id="venus">Venus</h2>
-      <img class="planet" id="venusPlanet" src="images//venus.png">
+      <p id="venusPlanet"><img class="planet" src="images//venus.png"></p>
 
       <h2 class="label" id="earth">Earth</h2>
       <p id="earthPlanet"><img class="planet" src="images//earth.png"></p>
 
       <h2 class="label" id="mars">Mars</h2>
-      <img class="planet" id="marsPlanet" src="images//mars.png">
+      <p id="marsPlanet"><img class="planet" src="images//mars.png"></p>
 
       <h2 class="label" id="jupiter">Jupiter</h2>
-      <img class="planet" id="jupiterPlanet" src="images//jupiter.png">
+      <p id="jupiterPlanet"><img class="planet" src="images//jupiter.png"></p>
 
       <h2 class="label" id="saturn">Saturn</h2>
-      <img class="planet" id="saturnPlanet" src="images//saturn.png">
+      <p id="saturnPlanet"><img class="planet" src="images//saturn.png"></p>
 
       <h2 class="label" id="uranus">Uranus</h2>
-      <img class="planet" id="uranusPlanet" src="images//uranus.png">
+      <p id="uranusPlanet"><img class="planet" src="images//uranus.png"></p>
 
       <h2 class="label" id="neptune">Neptune</h2>
-      <img class="planet" id="neptunePlanet" src="images//neptune.png">
+      <p id="neptunePlanet"><img class="planet" src="images//neptune.png"></p>
 
       <h2 class="label" id="pluto">Pluto</h2>
-      <img class="planet" id="plutoPlanet" src="images//pluto.png">
+      <p id="plutoPlanet"><img class="planet" src="images//pluto.png"></p>
 
       <script type="text/javascript">
-        function hideSun(){
-          let sunPlanet = document.getElementById('sunPlanet');
-          sunPlanet.innerHTML = '';
-          }
         let sun = document.getElementById('sun');
+        let mercury = document.getElementById('mercury');
+        let venus = document.getElementById('venus');
+        let earth = document.getElementById('earth');
+        let mars = document.getElementById('mars');
+        let jupiter = document.getElementById('jupiter');
+        let saturn = document.getElementById('saturn');
+        let neptune = document.getElementById('neptune');
+        let uranus = document.getElementById('uranus');
+        let pluto = document.getElementById('pluto');
+
+        function hideSun(){
+          document.getElementById('sunPlanet').innerHTML = '';
+          }
         sun.addEventListener('click', hideSun)
 
         function moveMercury(){
-          let mercuryPlanet=document.getElementById('mercuryPlanet');
-          mercuryPlanet.classList.toggle('moveRight');
+          document.getElementById('mercuryPlanet').classList.toggle('moveRight');
           }
-        let mercury=document.getElementById('mercury');
         mercury.addEventListener('mouseover', moveMercury)
+
+        function hideVenus(){
+          document.getElementById('venusPlanet').innerHTML='';
+          venus.innerHTML='';
+          }
+        venus.addEventListener('mouseenter', hideVenus)
 
         function hideEarth(){
           document.getElementById('earthPlanet').innerHTML='';
-          document.getElementById('earth').innerHTML='';
+          earth.innerHTML='';
           }
-        document.getElementById('earth').addEventListener('click', hideEarth)
+        earth.addEventListener('click', hideEarth)
       </script>
 
     </div>
